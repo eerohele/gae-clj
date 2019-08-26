@@ -1,0 +1,24 @@
+# As far as I know, only the java11 runtime supports executable JAR files.
+runtime: java11
+
+# The F1 instance class doesn't have enough memory to run a Clojure project
+# (even one as minimal as this), so we have to use at least an F2.
+#
+# If you try using F1, you're likely to bang your head against the wall trying
+# to figure out why you keep getting intermittent 500 errors, until you realize
+# you need to drill down into the logs in the Stackdriver Logs Viewer and find
+# this error:
+#
+#    Exceeded soft memory limit of 256 MB with 260 MB after servicing 0 requests
+#    total. Consider setting a larger instance class in app.yaml.
+instance_class: F2
+
+# tonsky/uberdeps doesn't yet generate a MANIFEST.MF with Main-Class, so we must
+# tell App Engine how to start our app.
+#
+# The downside is that we have to hard-code our uberjar name and main namespace
+# name here.
+#
+# Once https://github.com/tonsky/uberdeps/issues/13 gets implemented, we can
+# remove this entry and make things nice and simple.
+entrypoint: java -cp hello-world.jar clojure.main -m hello-world.core
