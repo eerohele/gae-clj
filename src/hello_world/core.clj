@@ -1,7 +1,7 @@
 (ns hello-world.core
   (:require [aleph.http :as http])
-  ;; :gen-class is required to instruct the Clojure compiler to generate Java
-  ;; classes.
+  ;; If you use Leiningen, :gen-class is required to instruct the Clojure
+  ;; compiler to turn this namespace into a Java class.
   (:gen-class))
 
 
