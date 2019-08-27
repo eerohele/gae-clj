@@ -35,14 +35,15 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
 1. Create an uberjar:
 
     ```bash
-    $ clj -A:uberjar
-    # Alternatively, if you have a Leiningen project, run `lein uberjar`.
+    $ lein uberjar
+    $ mkdir -p target/staging
+    $ cp target/hello-world.jar target/staging
     ```
 
 1. Copy `app.yaml` into the `target` directory:
 
     ```bash
-    $ cp app.yaml target
+    $ cp app.yaml target/staging
     # This seems a bit inelegant, but I haven't figured out a better way.
     #
     # This is necessary because GAE needs app.yaml and the JAR file to be
@@ -52,7 +53,7 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
 1. Deploy the application:
 
     ```bash
-    $ gcloud app deploy --project=foo-bar-123456 target
+    $ gcloud app deploy --project=foo-bar-123456 target/staging
     ```
 
 1. Open the app in your browser:
