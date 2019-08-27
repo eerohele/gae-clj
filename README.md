@@ -23,13 +23,13 @@ Replace the ID with your own project ID when running these commands.
 
 There are other ways of specifying the project ID. See the [gcloud CLI docs][gcloud command-line tool].
 
-1. Create new Google Cloud Platform project:
+1. Create a new Google Cloud Platform project:
 
     ```bash
     $ gcloud projects create foo-bar-123456
     ```
 
-1. Create new App Engine app:
+1. Create a new App Engine app:
 
     ```bash
     $ gcloud app create --project=foo-bar-123456
