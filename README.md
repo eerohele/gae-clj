@@ -3,7 +3,7 @@ Clojure on Google App Engine: Hello World
 
 This is a sample project that showcases how to deploy a Clojure web application into [Google App Engine].
 
-For a Leiningen version of this project, see the `lein` branch of this repository.
+For a Leiningen version of this project, see the [`lein`](https://github.com/eerohele/gae-clj/tree/lein) branch of this repository.
 
 **NOTE**: See all the files in this repository for comments regarding the various fiddly bits (`app.yaml` in particular).
 
