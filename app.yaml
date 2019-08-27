@@ -21,4 +21,7 @@ instance_class: F2
 #
 # Once https://github.com/tonsky/uberdeps/issues/13 gets implemented, we can
 # remove this entry and make things nice and simple.
+#
+# If you use Leiningen to create the uberjar, (`lein uberjar`), you can remove
+# this entry.
 entrypoint: java -cp hello-world.jar clojure.main -m hello-world.core
