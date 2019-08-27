@@ -38,7 +38,6 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
 
     ```bash
     $ clj -A:uberjar
-    # Alternatively, if you have a Leiningen project, run `lein uberjar`.
     ```
 
 1. Copy `app.yaml` into the `target` directory:
