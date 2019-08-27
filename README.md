@@ -9,7 +9,7 @@ This is a sample project that showcases how to deploy a Clojure web application 
 
 You must have these command-line tools installed:
 
-- [Clojure command-line tool]
+- [Leiningen]
 - [gcloud command-line tool]
 
 Additionally, before continuing, you must [authorize Google Cloud SDK Tools](https://cloud.google.com/sdk/docs/authorizing).
@@ -70,6 +70,6 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
     The first request's gonna take a while.
 
 [Google App Engine]: https://cloud.google.com/appengine/
-[Clojure command-line tool]: https://clojure.org/guides/getting_started
+[Leiningen]: https://leiningen.org
 [gcloud command-line tool]: https://cloud.google.com/sdk/gcloud/
 
