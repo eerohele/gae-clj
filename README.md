@@ -43,6 +43,9 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
     ```bash
     $ cp app.yaml target
     # This seems a bit inelegant, but I haven't figured out a better way.
+    #
+    # This is necessary because GAE needs app.yaml and the JAR file to be
+    # deployed in the same directory.
     ```
 
 1. Deploy the application:
