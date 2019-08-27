@@ -12,10 +12,7 @@ You must have these command-line tools installed:
 - [Clojure command-line tool]
 - [gcloud command-line tool]
 
-Additionally, before continuing, you must:
- 
-- [Authorize Google Cloud SDK Tools](https://cloud.google.com/sdk/docs/authorizing)
-- Create a new project via [the GCP console](https://console.cloud.google.com/) (note the project ID)
+Additionally, before continuing, you must [authorize Google Cloud SDK Tools](https://cloud.google.com/sdk/docs/authorizing).
 
 ## Steps
 
@@ -23,6 +20,12 @@ These steps assume the project ID of your GCP project is `foo-bar-123456`.
 Replace the ID with your own project ID when running these commands.
 
 There are other ways of specifying the project ID. See the [gcloud CLI docs][gcloud command-line tool].
+
+1. Create new Google Cloud Platform project:
+
+    ```bash
+    $ gcloud projects create foo-bar-123456
+    ```
 
 1. Create new App Engine app:
 
