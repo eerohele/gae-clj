@@ -48,8 +48,8 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
     $ cp app.yaml target/staging
     # This seems a bit inelegant, but I haven't figured out a better way.
     #
-    # This is necessary because GAE needs app.yaml and the JAR file to be
-    # deployed in the same directory.
+    # This is necessary because app.yaml and the deployable artifact need
+    # to be in the same directory.
     ```
 
 1. Deploy the application:
