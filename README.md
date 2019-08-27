@@ -38,9 +38,11 @@ There are other ways of specifying the project ID. See the [gcloud CLI docs][gcl
     $ lein uberjar
     $ mkdir -p target/staging
     $ cp target/hello-world.jar target/staging
+    # The gcloud CLI deploys all the files in the deployable directory, so we want
+    # to copy the uberjar into a directory without any other files.
     ```
 
-1. Copy `app.yaml` into the `target` directory:
+1. Copy `app.yaml` into the staging directory:
 
     ```bash
     $ cp app.yaml target/staging
