@@ -12,16 +12,3 @@ runtime: java11
 #    Exceeded soft memory limit of 256 MB with 260 MB after servicing 0 requests
 #    total. Consider setting a larger instance class in app.yaml.
 instance_class: F2
-
-# tonsky/uberdeps doesn't yet generate a MANIFEST.MF with Main-Class, so we must
-# tell App Engine how to start our app.
-#
-# The downside is that we have to hard-code our uberjar name and main namespace
-# name here.
-#
-# Once https://github.com/tonsky/uberdeps/issues/13 gets implemented, we can
-# remove this entry and make things nice and simple.
-#
-# If you use Leiningen to create the uberjar, (`lein uberjar`), you can remove
-# this entry.
-entrypoint: java -cp hello-world.jar clojure.main -m hello-world.core
